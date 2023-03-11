@@ -497,17 +497,8 @@ public class Main extends javax.swing.JFrame {
     private void jT_ScreenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jT_ScreenMouseClicked
         if (jL_Lista.getSelectedIndex() != -1) {
             String s = (String) ModL.getElementAt(jL_Lista.getSelectedIndex()) + "/";
-            TreePath[] s2 = jT_Screen.getSelectionPaths();
-            if (s2 != null) {
-                for (TreePath s3 : s2) {
-                    String s4 = s3.toString();
-                    s4 = s4.replace("[", "");
-                    s4 = s4.replace("]", "");
-                    s4 = s4.replaceAll(",", "/");
-                    s4 = s4.replaceAll(" ", "");
-
-                    s += s4;
-                }
+            TreePath[] ss = jT_Screen.getSelectionPaths();
+            
             }
             jPB_Upload.setStringPainted(true);
             jPB_Upload.setString(s);
